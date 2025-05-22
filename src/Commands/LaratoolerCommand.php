@@ -1,12 +1,14 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+declare(strict_types=1);
+
+namespace Laratooler\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+final class LaratoolerCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laratooler';
 
     public $description = 'My command';
 

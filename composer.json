@@ -1,17 +1,28 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "keteraf/laratooler",
+    "description": "A simple yet useful package that install all the modern devtools you need.",
     "keywords": [
-        ":vendor_name",
+        "keteraf",
         "laravel",
-        ":package_slug"
+        "laratooler",
+        "development-tools",
+        "laravel-package",
+        "php-tools",
+        "code-quality",
+        "static-analysis",
+        "rector",
+        "larastan",
+        "pint",
+        "phpstan",
+        "code-style",
+        "developer-experience"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/keteraf/laratooler",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Raffaele Longo Elia",
+            "email": "raffaele.longo.elia@gmail.com",
             "role": "Developer"
         }
     ],
@@ -30,19 +41,17 @@
         "pestphp/pest-plugin-laravel": "^3.0",
         "phpstan/extension-installer": "^1.3||^2.0",
         "phpstan/phpstan-deprecation-rules": "^1.1||^2.0",
-        "phpstan/phpstan-phpunit": "^1.3||^2.0",
-        "spatie/laravel-ray": "^1.35"
+        "phpstan/phpstan-phpunit": "^1.3||^2.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Laratooler\\": "src/",
+            "Laratooler\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "Laratooler\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -51,7 +60,7 @@
         "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "lint": "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true,
@@ -63,10 +72,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "laratooler\\laratoolerServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "laratooler": "laratooler\\Facades\\laratooler"
             }
         }
     },
