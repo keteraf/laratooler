@@ -15,7 +15,7 @@ final class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Laratooler\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'Laratooler\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
