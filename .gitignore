@@ -1,6 +1,7 @@
 # Composer Related
 composer.lock
 /vendor
+/playground
 
 # Frontend Assets
 /node_modules

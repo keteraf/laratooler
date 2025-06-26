@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Laratooler;
 
+use Laratooler\Commands\LarastanCommand;
 use Laratooler\Commands\LaratoolerCommand;
 use Laratooler\Commands\PintCommand;
 use Spatie\LaravelPackageTools\Package;
@@ -19,6 +20,7 @@ final class LaratoolerServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasMigration('create_laratooler_table')
             ->hasCommand(LaratoolerCommand::class)
-            ->hasCommand(PintCommand::class);
+            ->hasCommand(PintCommand::class)
+            ->hasCommand(LarastanCommand::class);
     }
 }
